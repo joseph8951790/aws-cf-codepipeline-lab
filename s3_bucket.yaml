@@ -24,4 +24,4 @@ Resources:
 Outputs:
   BucketNameOutput:
     Value: !Ref MyS3Bucket
-    Description: Name of the bucket created
+    Description: Josephcicd45637
