@@ -4,7 +4,7 @@ Description: Simple S3 Bucket creation using CloudFormation
 Parameters:
   BucketName:
     Type: String
-    Description: Name of the S3 bucket
+    Description: Josephcicd45637
   VersioningStatus:
     Type: String
     AllowedValues:
