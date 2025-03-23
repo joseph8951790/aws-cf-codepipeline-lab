@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Simple S3 Bucket creation using CloudFormation
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket
+  VersioningStatus:
+    Type: String
+    AllowedValues:
+      - Enabled
+      - Suspended
+    Default: Suspended
+    Description: Enable or disable versioning
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      VersioningConfiguration:
+        Status: !Ref VersioningStatus
+
+Outputs:
+  BucketNameOutput:
+    Value: !Ref MyS3Bucket
+    Description: Name of the bucket created
